@@ -25,9 +25,13 @@ function createIssue() {
 }
 
 function showResults(json) {
+<<<<<<< HEAD
   const resultsDiv = document.getElementById('results');
   const repoLink = `<a href='${json.html_url}' id='repo-full-name'>${json.full_name}</a>`;
   resultsDiv.innerHTML = repoLink;
+=======
+  console.log(json);
+>>>>>>> 8955a93758a2b6f9ba032ce0d261cd6daa68a3be
 }
 
 function forkRepo() {
@@ -36,11 +40,22 @@ function forkRepo() {
   fetch(`https://api.github.com/repos/${repo}/forks`, {
     method: 'post',
     headers: {Authorization: `token ${getToken()}`}
+<<<<<<< HEAD
   }).then(res => res.json()).then(json => showResults(json))
+=======
+}).then(res => res.json()).then(json => showResults(json))
+>>>>>>> 8955a93758a2b6f9ba032ce0d261cd6daa68a3be
 }
 
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
+<<<<<<< HEAD
   return '';
+=======
+  //headers: {
+  //Authorization: `token 99b90db2c215c2715593880c20261b069e33bed9`
+//}
+  return '235b4c34290be321b895a61abc6f98ed319dd669';
+>>>>>>> 8955a93758a2b6f9ba032ce0d261cd6daa68a3be
 }
